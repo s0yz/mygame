@@ -1,0 +1,8 @@
+class bullet {
+	constructor(x, y, s, r) {
+		this.position = new p5.Vector(x, y);
+		this.direction = new p5.Vector();
+		this.speed = s;
+		this.radius = r;
+	}
+}
