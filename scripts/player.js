@@ -94,18 +94,15 @@ Player.prototype.shoot = function() {
 };
 
 Player.prototype.show = function() {
-	push();
-	noStroke();
 	fill(0, 0, 100);
 	ellipse(this.cx(), this.cy(), this.get_diameter());
 	if (this.loader > 0) {
-		stroke(0, 0, 0);
-		strokeWeight(5);
+		stroke(0);
+		strokeWeight(2);
 		noFill();
 		let stop = map(this.loader, 0, this.max_load, 0, TAU);
 		arc(this.cx(), this.cy(), this.get_diameter(), this.get_diameter(), 0, stop);
 	}
-	pop();
 };
 
 Player.prototype.toMouse = function() {

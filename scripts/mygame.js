@@ -1,8 +1,7 @@
 let win;
 let game;
 const sw = 960;
-const sh = 640;
-var sound;
+const sh = 540;
 
 function preload() {
 	
@@ -51,6 +50,25 @@ function draw() {
     //background(25);
     game.update();
     noFill();
-    strokeWeight(5);
-    rect(1, 1, width - 1, height - 1);
+    stroke(0);
+    strokeWeight(8);
+    rect(0, 0, width, height);
+    orb();
+}
+
+let s = 100;
+let up = false;
+
+function orb() {
+	//ellipse(40, 315, 20);
+	stroke(0);
+	fill(0, s, 100);
+    strokeWeight(2);
+	ellipse(40, 315, 20);
+	noStroke();
+	if (up) s += 2;
+	else s -= 2;
+	if (s >= 100) up = false;
+	else if (s <= 25) up = true;
+
 }

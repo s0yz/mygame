@@ -5,8 +5,8 @@ class Game {
 		this.ennemies = [];
 		this.fscrn =  false;
 		this.player = new Player(this, createVector(width*.5, height*.5), 20);
-		this.bars = [new Bar(20, 20, this.player, 'hp', 'max_hp', 0),
-					 new Bar(20, 600, this.player, 'stamina', 'max_stamina', 100)]
+		this.bars = [new Bar(30, 460, this.player, 'hp', 'max_hp', 0),
+					 new Bar(30, 490, this.player, 'stamina', 'max_stamina', 100)]
 		this.ennemies.push(new Ennemy(this, createVector()));
 		this.bground = new Background();
 	}
@@ -98,10 +98,12 @@ Game.prototype.mouseReleased = function(mouseButton) {
 }
 
 Game.prototype.showBullets = function() {
-	fill(50, 100, 50);
+	stroke(0);
+	strokeWeight(2);
+	fill(50, 100, 100, 0.6666);
 	for (let i = 1; i <= this.player.max_load; i++) {
 		if (i > this.player.loader) fill(40, 10, 33);
-		rect(width - i * 13 - 20, 600, 7, 20);
+		rect(width - i * 13 - 20, 490, 7, 20);
 	}
 }
 

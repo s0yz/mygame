@@ -52,15 +52,17 @@ Ennemy.prototype.update = function() {
 	if (this.isColliding(this.food)) {
 		if (this.food.is_dashing())
 			this.bleed(this.food);
-		else if (this.food.is_moving()) {
-			console.log('getting pushed');
-			//this.food.applyForce(p5.Vector.mult(this.direction, this.speed));
-			this.applyForce(p5.Vector.mult(this.food.velocity, this.mass));
-		}
-		else {
+		//else if (this.food.is_moving()) {
+			//this.food.applyForce(p5.Vector.mult(this.food.velocity, -5));
+			//this.velocity.add(this.food.velocity)
+			//this.food.applyForce(this.velocity);
+			//this.applyForce(p5.Vector.mult(this.food.direction, this.food.speed));
+		//}
+		//else {
+			//this.food.applyForce(this.velocity);
+		//}
 			this.stop();
 			this.food.hp--;
-		}
 	}
 	this.position.add(this.velocity);
 	this.acceleration.mult(0);
