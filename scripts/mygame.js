@@ -14,6 +14,7 @@ function setup() {
 	centerCanvas();
 	game = new Game();
 	colorMode(HSB);
+	textSize(32);
 }
 
 function windowResized() {
