@@ -18,7 +18,7 @@ bullet.prototype.is_out = function() {
 }
 
 bullet.prototype.show = function() {
-	fill(50, 100, 50, 1);
+	fill(50, 100, 100);
 	ellipse(this.x() - game.player.offx(), this.y() - game.player.offy(), this.get_diameter());
 };
 
