@@ -53,7 +53,7 @@ function draw() {
     stroke(0);
     strokeWeight(8);
     rect(0, 0, width, height);
-    orb();
+    //orb();
 }
 
 let s = 100;
