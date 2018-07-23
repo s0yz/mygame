@@ -120,6 +120,8 @@ Game.prototype.update = function() {
 	this.player.show();
 	this.showBullets();
 	for (let i = 0; i < this.bars.length; i++) this.bars[i].show();
+	fill(0, 0, 100, 0.6666);
+	text(this.xp, 20, 30);
 }
 
 Game.prototype.updateBlood = function() {
